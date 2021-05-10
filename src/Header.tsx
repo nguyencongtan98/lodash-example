@@ -13,7 +13,7 @@ export const Header = (): JSX.Element => {
   return (
     <Flex px={2} color="white" bg="green" alignItems="center">
       <Image
-        src="../iphone.jpg"
+        // src="../iphone.jpg"
         sx={{ width: 48, height: 48, borderRadius: 9999 }}
       />
       <Text p={2} fontWeight="bold">
