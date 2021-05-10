@@ -66,7 +66,7 @@ const App = () => {
         <Route exact path="/login">
           <Login />
         </Route>
-        <Route exact path="/">
+        <Route exact path="/lodash-example">
           <Flex>{productList}</Flex>
         </Route>
       </Switch>
