@@ -16,7 +16,7 @@ export const Header = (): JSX.Element => {
         sx={{ width: 48, height: 48, borderRadius: 9999 }}
       />
       <Text p={2} fontWeight="bold">
-        <Link to="/">Home</Link>
+        <Link to="/lodash-example">Home</Link>
       </Text>
       <Box mx="auto" />
       <Link to="/fdf">Profile</Link>
