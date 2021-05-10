@@ -1,4 +1,5 @@
 {
+  "homepage": "http://nguyencongtan98.gitlab.io/lodash-example",
   "name": "lodash-example3",
   "version": "0.1.0",
   "private": true,
@@ -26,6 +27,8 @@
     "yarn": "^1.22.10"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -52,6 +55,7 @@
   "devDependencies": {
     "@types/lodash": "^4.14.168",
     "@types/react-router-dom": "^5.1.7",
-    "@types/rebass": "^4.0.8"
+    "@types/rebass": "^4.0.8",
+    "gh-pages": "^3.1.0"
   }
 }
