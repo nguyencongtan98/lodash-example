@@ -31,7 +31,7 @@ const App = () => {
   ]);
 
   const callAPI = () => {
-    fetch("http://localhost:9000/testAPI")
+    fetch("https://6098f90399011f001713fd6d.mockapi.io/getProduct/product")
       .then((res) => res.text())
       .then((res) => {
         setData(JSON.parse(res));
