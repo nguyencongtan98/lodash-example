@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { Login } from "./Login";
 import { Dispatch, RootState } from "./store";
 import { Provider, useDispatch, useSelector } from "react-redux";
-import { store } from "./store";
+import Cookies from "universal-cookie";
 
 type ProductProps = {
   name: string;
@@ -18,6 +18,9 @@ type ProductProps = {
 };
 
 const App = () => {
+  const cookies = new Cookies();
+  cookies.set("mycat", "Pacman", { path: "/" });
+
   const [data, setData] = useState<ProductProps[]>([
     {
       description: "",
@@ -55,8 +58,6 @@ const App = () => {
   const productList = data.map((item, index) => {
     return <Product key={index} data={item} />;
   });
-
-  console.log("countState: ", countState);
 
   return (
     <Router>

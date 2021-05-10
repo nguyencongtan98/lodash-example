@@ -4,6 +4,12 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 export const Header = (): JSX.Element => {
   const checkLogin = true;
+
+  const token = localStorage.getItem("token");
+  const logout = () => {
+    localStorage.setItem("token", "false");
+    console.log("HAHAHHA");
+  };
   return (
     <Flex px={2} color="white" bg="green" alignItems="center">
       <Image
@@ -15,10 +21,14 @@ export const Header = (): JSX.Element => {
       </Text>
       <Box mx="auto" />
       <Link to="/fdf">Profile</Link>
-      {checkLogin ? (
+      {token !== "true" ? (
         <Link to="/login">Login</Link>
       ) : (
-        <Link to="/logout">Logout</Link>
+        <Link to="/logout">
+          <a href="" onClick={logout}>
+            LOGOUT
+          </a>
+        </Link>
       )}
     </Flex>
   );
